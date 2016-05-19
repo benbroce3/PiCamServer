@@ -9,7 +9,9 @@
 			echo $_POST['pass'];
 			if ($_POST['pass'] = $password)
 			{
-				header(location: 'https://www.google.com');
+				<script> 
+					window.location.href = 'MainPage.html'
+				</script>
 
 			}
 		?>
