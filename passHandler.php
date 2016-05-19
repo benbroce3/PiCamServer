@@ -9,10 +9,12 @@
 			echo $_POST['pass'];
 			if ($_POST['pass'] = $password)
 			{
+				?>
+				
 				<script> 
 					window.location.href = 'MainPage.html'
 				</script>
-
+		<?php
 			}
 		?>
 
