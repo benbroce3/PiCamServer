@@ -16,18 +16,13 @@ length = raw_input("How long should I run (in minutes): ")
 length = float(length)*60
 interval = raw_input("How often should I take a picture (in seconds): ")
 interval = float(interval)+2
-directory = raw_input("What is the name of the directory for this session?: ")
-directory = 'pics/' + directory
 
 while (counter <= length):
-        path = directory + image_count + '.jpg'
+	timestamp = time.strftime("%m-%d-%Y_%H:%M:%S")
+        path = '../../../../var/www/html/PiCamServer/pics/' + timestamp + '.jpg'
         camera.capture(path)
         camera.start_preview()
         time.sleep(interval)
         camera.stop_preview()
         counter += interval
-	image_count += 1
         length -= 2
-
-path = directory + image_count + '.jpg'
-camera.capture(path)
