@@ -4,7 +4,7 @@
 	<?php
 		//password variable
 		$password = "bo";
-		if ($_POST['pass'] = $password)
+		if ($_POST["pass"] = $password)
 		{
 		//	echo "<script type = 'text/javascript'>\n";
 		//	echo  "window.location= 'picstream.html';\n";
@@ -22,4 +22,4 @@
 	}
 	?>
 	</body>
-	</html>
+</html>
