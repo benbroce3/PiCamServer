@@ -10,10 +10,17 @@
 			{
 				
 				
-				"<script> 
-					window.location.href = 'MainPage.html'
-				</script>"
-		
+				echo "<script type='text/javascript'>\n";
+				echo	"window.location.href = 'MainPage.html';\n";
+				echo "</script>";
+				exit();
+			}
+			else 
+			{
+				echo "<script type='text/javascript'>\n";
+				echo	"window.location.href = 'passpage.html';\n";
+				echo "</script>";
+				exit();
 			}
 		?>
 
