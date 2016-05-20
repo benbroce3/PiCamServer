@@ -9,17 +9,20 @@
 			if ($_POST['pass'] = $password)
 			{
 				
-				
-				echo "<script type='text/javascript'>\n";
-				echo	"window.location.href = 'MainPage.html';\n";
-				echo "</script>";
+			?>	
+				<script type='text/javascript'>
+					window.location.href = 'picstream.html';
+					</script>;
+			<?php
 				exit();
 			}
 			else 
 			{
-				echo "<script type='text/javascript'>\n";
-				echo	"window.location.href = 'passpage.html';\n";
-				echo "</script>";
+				?>
+				<script type='text/javascript'>
+					window.location.href = 'passpage.html';
+				</script>
+				<?php
 				exit();
 			}
 		?>
