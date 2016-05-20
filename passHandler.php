@@ -1,3 +1,8 @@
+
+	<html>
+	<body>
+	<h2>hi<h2>
+		
 	<?php
 			//password variable
 			$password = "bo";
@@ -6,22 +11,18 @@
 		
 	if ($_POST['pass'] = $password)
 			{
-				header('Location: picstream.html');
-				
+				echo "<script type = 'text/javascript'>\n";
+				echo  "window.location= 'picstream.html';\n";
+				echo "</script>";
 				exit();
 			}
 			else 
 			{
-				
-				header('Location: passpage.html')
-				
+				echo "<script type = 'text/javascript'>\n";
+				echo  "window.location= 'passpage.html';\n";
+				echo "</script>";
 				exit();
 			}
 			?>
-	<html>
-	<body>
-	<h2>hi<h2>
-		
-
 	</body>
 	</html>
