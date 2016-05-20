@@ -6,20 +6,20 @@
 		$password = "bo";
 		if ($_POST["pass"] == $password)
 		{
-		//	echo "<script type = 'text/javascript'>\n";
-		//	echo  "window.location= 'picstream.html';\n";
-		//	echo "</script>";
-		//	exit();
-		echo "correct";
+			echo "<script type = 'text/javascript'>\n";
+			echo  "window.location= 'picstream.html';\n";
+			echo "</script>";
+			exit();
+		
 		}
-	else 
-	{
-		//echo "<script type = 'text/javascript'>\n";
-		//echo  "window.location= 'passpage.html';\n";
-		//echo "</script>";
-		//exit();
-		echo "wrong";
-	}
+		else 
+		{
+		echo "<script type = 'text/javascript'>\n";
+		echo  "window.location= 'passpage.html';\n";
+		echo "</script>";
+		exit();
+		
+		}
 	?>
 	</body>
 </html>
