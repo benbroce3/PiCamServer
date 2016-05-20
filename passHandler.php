@@ -7,7 +7,7 @@
 		if ($_POST["pass"] == $password)
 		{
 			echo "<script type = 'text/javascript'>\n";
-			echo  "window.location= 'picstream.html';\n";
+			echo  "window.location= 'picstream.php';\n";
 			echo "</script>";
 			exit();
 		
