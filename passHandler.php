@@ -5,8 +5,7 @@
 		<?php
 			//password variable
 			$password = "bo";
-			echo "yoyo";
-			echo $_POST['pass'];
+		
 			if ($_POST['pass'] = $password)
 			{
 				
