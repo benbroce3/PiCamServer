@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>hi<h2>
+<h2>Checking...<h2>
 	<?php
 		//password variable
 		$password = "bo";
@@ -10,15 +10,13 @@
 			echo  "window.location= 'picstream.php';\n";
 			echo "</script>";
 			exit();
-		
 		}
-		else 
+		else
 		{
 		echo "<script type = 'text/javascript'>\n";
 		echo  "window.location= 'passpage.html';\n";
 		echo "</script>";
 		exit();
-		
 		}
 	?>
 	</body>
