@@ -7,9 +7,12 @@
 		<center><h1>Picture Stream:</h1></center>
 		<?php
 			$dirname = "pics/";
-			$images = glob($dirname."*.jpg");
+			$images = array_reverse(glob($dirname."*.jpg"));
 			foreach($images as $image) {
-			echo '<img src="'.$image.'" height="400" width="600" /><br />';
+			echo '<img src="'.$image.'" height="400" width="600">';
+			echo '<br>';
+			echo '<h3>'.$image.'</h3>';
+			echo '<br>';
 			}
 		?>
 		<script>
