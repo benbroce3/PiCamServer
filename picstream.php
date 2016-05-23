@@ -10,17 +10,13 @@
 			foreach($images as $image) {
 			echo '<img src="'.$image.'" height="360" width="540" /><br />';
 			}
-			
 		?>
 		<script>
-			
-			setInterval(myTimer, 10000);
-			 function myTimer()
-			 {
-			 	location.reload(); 
-			 }
-			 
-			)
+			window.setInterval(myTimer, 10000);
+			function myTimer()
+			{
+				location.reload(); 
+			} 
 		</script>
 	</body>
 </html>
