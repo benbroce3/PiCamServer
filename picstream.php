@@ -1,11 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<header>
-		<title>Main Page</title>
+		<title>Pictures Stream</title>
 	</header>
-	
 	<body>
-		<h2>How secure am I?<h2>
+		<?php
+			$dirname = "pics/";
+			$images = glob($dirname."*.png");
+			foreach($images as $image) {
+			echo '<img src="'.$image.'" /><br />';
+			}
+		?>
 	</body>
-
 </html>
