@@ -6,7 +6,7 @@
 	<body>
 		<?php
 			$dirname = "pics/";
-			$images = glob($dirname."*.png");
+			$images = glob($dirname."*.jpg");
 			foreach($images as $image) {
 			echo '<img src="'.$image.'" /><br />';
 			}
