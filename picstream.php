@@ -14,7 +14,7 @@
 		?>
 		<script>
 			
-			window.setTimer(reload, 10000)
+			var mytimer = setTimer(reload, 10000)
 			 function reload()
 			 {
 			 	location.reload(); 
