@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+<DOCTYPE! html>
 <html>
 	<header>
-		<title>Pictures Stream</title>
+		<title>Picture Stream</title>
 	</header>
 	<body>
+		<center><h1>Picture Stream:</h1></center>
 		<?php
 			$dirname = "pics/";
 			$images = glob($dirname."*.jpg");
 			foreach($images as $image) {
-			echo '<img src="'.$image.'" height="360" width="540" /><br />';
+			echo '<img src="'.$image.'" height="400" width="600" /><br />';
 			}
 		?>
 		<script>
