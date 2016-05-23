@@ -10,6 +10,10 @@
 			foreach($images as $image) {
 			echo '<img src="'.$image.'" height="360" width="540" /><br />';
 			}
+			sleep(10);
 		?>
+		<script>
+			location.reload(); 
+		</script>
 	</body>
 </html>
