@@ -12,29 +12,51 @@
 
 <!DOCTYPE html>
 <html>
-	<header>
+	<head>
 		<title>Picture Stream</title>
-	</header>
+		<!--Bootstrap Setup-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+		<!--<script src="bootstrap/bootstrap.min.js"></script>-->
+	</head>
 	<body>
-		<center><h1>Picture Stream:</h1></center>
-		<?php
-			$dirname = "pics/";
-			$images = array_reverse(glob($dirname."*.jpg"));
-			foreach($images as $image) 
-			{
-				echo '<img src="'.$image.'" height="400" width="600">';
-				echo '<br>';
-				echo '<h3>'.$image.'</h3>';
-				echo '<br>';
-			}
-			
-		?>
-		<script>
-			window.setInterval(myTimer, 10000);
-			function myTimer()
-			{
-				location.reload(); 
-			} 
-		</script>
+		<div class="container-fluid">
+			<!--Navigation Tabs-->
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="nav nav-tabs" style="text-align:center">
+						<li role="presentation"><a href="vidstream.php">Video Stream</a></li>
+						<li role="presentation" class="active"><a href="picstream.php">Picture Stream</a></li>
+						<li role="presentation"><a href="cgi-bin/config.py">Configuration</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--Pictures-->
+			<div class="row">
+				<?php
+					//make reversed (chrono) array of image filenames
+					$dirname = "pics/";
+					$images = array_reverse(glob($dirname."*.jpg"));
+					//recursively display all images in "pics" dir
+					//formatted into 3 columns with timestamps beneath
+					foreach($images as $image) {
+						echo'
+							<div class="col-md-4">
+								<img src="'.$image.'" style="max-width:100%;max-height:100%;">
+								<br>
+								<center><h3>'.$image.'</h3></center>
+							</div>
+						';
+					}
+				?>
+				<script>
+					window.setInterval(myTimer, 10000);
+					function myTimer()
+					{
+						location.reload();
+					}
+				</script>
+			</div>
+		</div>
 	</body>
 </html>
