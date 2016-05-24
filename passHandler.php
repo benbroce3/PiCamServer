@@ -2,7 +2,10 @@
 	//setting cookies
 	$cookieman = true;
 	$cookiename = "Monster";
-	setcookie($cookiename, $cookieman, time() + 5, "/");
+	function cookiemaker()
+	{
+		setcookie($cookiename, $cookieman, time() + 5, "/");
+	}
 ?>
 
 <html>
@@ -17,6 +20,7 @@
 			echo  "window.location= 'picstream.php';\n";
 			echo "</script>";
 			exit();
+			cookiemaker();
 		}
 		else
 		{
