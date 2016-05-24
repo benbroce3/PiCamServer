@@ -1,13 +1,13 @@
 <?php
 	 //checking for cookie
-		        $namecheck = "Monster";
-			if(!isset($_COOKIE[$namecheck])) 
-			{
-				echo "<script type = 'text/javascript'>\n";
-				echo  "window.location= 'passpage.html';\n";
-				echo "</script>";
-				exit();
-			}
+	 $namecheck = "Monster";
+	if(!isset($_COOKIE[$namecheck])) 
+	{
+		echo "<script type = 'text/javascript'>\n";
+		echo  "window.location= 'passpage.html';\n";
+		echo "</script>";
+		exit();
+	}
 ?>
 
 
