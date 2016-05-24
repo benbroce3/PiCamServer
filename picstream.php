@@ -21,11 +21,11 @@
 			<!--Pictures-->
 			<div class="row">
 				<?php
-					//make reversed array of image names
+					//make reversed (chrono) array of image filenames
 					$dirname = "pics/";
 					$images = array_reverse(glob($dirname."*.jpg"));
 					//count the number of images in array
-					$picnum = count($images); //reload when picnum != count($images)
+					$picnum = count($images);
 					//recursively display all images in "pics" dir
 					//formatted into 3 columns with timestamps beneath
 					foreach($images as $image) {
@@ -37,14 +37,16 @@
 						</div>
 				<?php
 					}
+					//reload when $picnum != count($images)
+					while(1) {
+						if ($picnum != count($images)) {
+							break;
+						}
+					}
 				?>
-				<script>
-					window.setInterval(myTimer, 10000);
-					function myTimer()
-					{
-						location.reload(); 
-					} 
-				</script>
+					<script>
+						location.reload();
+					</script>
 			</div>
 		</div>
 	</body>
