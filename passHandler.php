@@ -2,8 +2,10 @@
 	//setting cookies
 	$dodo = "1";
 	$cookiename = "Monster";
+	function cookiemaker()
+	{
 	setcookie($cookiename,$dodo,time() + 60, "/");
-	
+	}
 ?>
 
 <html>
@@ -14,7 +16,7 @@
 		$password = "bo";
 		if ($_POST["pass"] == $password)
 		{
-			
+			cookiemaker();
 			echo "<script type = 'text/javascript'>\n";
 			echo  "window.location= 'picstream.php';\n";
 			echo "</script>";
