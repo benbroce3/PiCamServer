@@ -16,11 +16,12 @@
 		$password = "bo";
 		if ($_POST["pass"] == $password)
 		{
+			cookiemaker();
 			echo "<script type = 'text/javascript'>\n";
 			echo  "window.location= 'picstream.php';\n";
 			echo "</script>";
 			exit();
-			cookiemaker();
+			
 		}
 		else
 		{
