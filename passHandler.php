@@ -1,10 +1,8 @@
 <?php
 	//setting cookies
-	
+	$dodo = "1";
 	$cookiename = "Monster";
-	
-	
-		setcookie($cookiename, time() + 60, "/");
+	setcookie($cookiename,$dodo,time() + 60, "/");
 	
 ?>
 
@@ -25,10 +23,10 @@
 		}
 		else
 		{
-		echo "<script type = 'text/javascript'>\n";
-		echo  "window.location= 'passpage.html';\n";
-		echo "</script>";
-		exit();
+			echo "<script type = 'text/javascript'>\n";
+			echo  "window.location= 'passpage.html';\n";
+			echo "</script>";
+			exit();
 		}
 	?>
 	</body>
