@@ -1,4 +1,16 @@
-<DOCTYPE! html>
+<?php
+	 //checking for cookie
+		        $namecheck = "Monster";
+			if(!isset($_COOKIE[$namecheck])) 
+			{
+				echo "<script type = 'text/javascript'>\n";
+				echo  "window.location= 'passpage.html';\n";
+				echo "</script>";
+				exit();
+			}
+?>
+
+
 <html>
 	<header>
 		<title>Picture Stream</title>
@@ -13,7 +25,8 @@
 			echo '<br>';
 			echo '<h3>'.$image.'</h3>';
 			echo '<br>';
-			}
+				}
+			
 		?>
 		<script>
 			window.setInterval(myTimer, 10000);
