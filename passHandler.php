@@ -23,7 +23,9 @@
 		}
 		else
 		{
+			//Setting session variable
 			$_SESSION["SecretKey"] = "close";
+			
 			echo "<script type = 'text/javascript'>\n";
 			echo  "window.location= 'passpage.html';\n";
 			echo "</script>";
