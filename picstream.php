@@ -20,12 +20,13 @@
 		<?php
 			$dirname = "pics/";
 			$images = array_reverse(glob($dirname."*.jpg"));
-			foreach($images as $image) {
-			echo '<img src="'.$image.'" height="400" width="600">';
-			echo '<br>';
-			echo '<h3>'.$image.'</h3>';
-			echo '<br>';
-				}
+			foreach($images as $image) 
+			{
+				echo '<img src="'.$image.'" height="400" width="600">';
+				echo '<br>';
+				echo '<h3>'.$image.'</h3>';
+				echo '<br>';
+			}
 			
 		?>
 		<script>
