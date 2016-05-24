@@ -1,3 +1,10 @@
+<?php
+	//setting cookies
+	$cookieman = true;
+	$cookiename = "Monster";
+	setcookie($cookiename, $cookieman, time() + 5, "/");
+?>
+
 <html>
 <body>
 <h2>Checking...<h2>
