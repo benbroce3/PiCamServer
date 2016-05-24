@@ -23,15 +23,18 @@
 				<?php
 					//make reversed (chrono) array of image filenames
 					$dirname = "pics/";
-					$images = array_reverse(glob($dirname."*.jpg"));
+					function getPics() {
+						$images = array_reverse(glob($dirname."*.jpg"));
+					}
+					getPics();
 					//count the number of images in array
-					$picnum = count($images);
+					$picNum = count($images);
 					//recursively display all images in "pics" dir
 					//formatted into 3 columns with timestamps beneath
 					foreach($images as $image) {
 				?>
 						<div class="col-md-4">
-							<img src="'.$image.'" height="400" width="600">
+							<img src="'.$image.'" style="max-width:100%;max-height:100%;">
 							<br>
 							<center><h3>'.$image.'</h3></center>
 						</div>
@@ -39,7 +42,8 @@
 					}
 					//reload when $picnum != count($images)
 					while(1) {
-						if ($picnum != count($images)) {
+						getPics();
+						if ($picNum != count($images)) {
 							break;
 						}
 					}
