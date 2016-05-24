@@ -1,10 +1,10 @@
 <?php
 	//setting cookies
-	$cookieman = true;
+	
 	$cookiename = "Monster";
 	function cookiemaker()
 	{
-		setcookie($cookiename, $cookieman, time() + 5, "/");
+		setcookie($cookiename, time() + 60, "/");
 	}
 ?>
 
