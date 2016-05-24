@@ -1,12 +1,12 @@
 <DOCTYPE! html>
 <html>
-	<header>
+	<head>
 		<title>Video Stream</title>
 		<!--Bootstrap Setup-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 		<!--<script src="bootstrap/bootstrap.min.js"></script>-->
-	</header>
+	</head>
 	<body>
 		<div class="container-fluid">
 			<!--Navigation Tabs-->
