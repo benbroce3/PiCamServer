@@ -1,7 +1,8 @@
 <?php
+	session_start();
 	 //checking for cookie
-	 $namecheck = "Monster";
-	if(!isset($_COOKIE[$namecheck])) 
+	 $keycheck = "enter";
+	if($_SESSION["SecretKey"] != $keycheck) 
 	{
 		echo "<script type = 'text/javascript'>\n";
 		echo  "window.location = 'passpage.html';\n";
