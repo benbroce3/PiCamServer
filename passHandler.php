@@ -1,9 +1,6 @@
 <?php
-	//setting cookies
-	$dodo = "1";
-	$cookiename = "Monster";
-
-	setcookie($cookiename,$dodo,time() + 60, "/");
+	//starting session
+	session_start();
 	
 ?>
 
@@ -15,6 +12,8 @@
 		$password = "bo";
 		if ($_POST["pass"] == $password)
 		{
+			//setting session variable
+			$_SESSION["SecretKey"] = "enter";
 			
 			echo "<script type = 'text/javascript'>\n";
 			echo  "window.location= 'picstream.php';\n";
@@ -24,6 +23,7 @@
 		}
 		else
 		{
+			$_SESSION["SecretKey"] = "close";
 			echo "<script type = 'text/javascript'>\n";
 			echo  "window.location= 'passpage.html';\n";
 			echo "</script>";
