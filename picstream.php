@@ -4,13 +4,12 @@
 	if(!isset($_COOKIE[$namecheck])) 
 	{
 		echo "<script type = 'text/javascript'>\n";
-		echo  "window.location= 'passpage.html';\n";
+		echo  "window.location = 'passpage.html';\n";
 		echo "</script>";
-		exit();
 	}
 ?>
 
-
+<!DOCTYPE html>
 <html>
 	<header>
 		<title>Picture Stream</title>
