@@ -1,3 +1,4 @@
+import picamera
 from picamera import PiCamera
 import time
 import datetime
@@ -17,8 +18,11 @@ length = float(length)*60
 interval = raw_input("How often should I take a picture (in seconds): ")
 interval = float(interval)+2
 
+camera.annotate_background = picamera.Color('black')
+
 while (counter <= length):
 	timestamp = time.strftime("%m-%d-%Y_%H:%M:%S")
+	camera.annotate_text = timestamp
         path = '../../../../var/www/html/PiCamServer/pics/' + timestamp + '.jpg'
         camera.capture(path)
         camera.start_preview()
