@@ -27,7 +27,7 @@
 			$_SESSION["SecretKey"] = "close";
 			
 			echo "<script type = 'text/javascript'>\n";
-			echo  "window.location= 'passpage.html';\n";
+			echo  "window.location= 'passpage.php';\n";
 			echo "</script>";
 			exit();
 		}
