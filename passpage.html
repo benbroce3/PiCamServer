@@ -4,7 +4,7 @@
 		<title>Password Page</title>
 	</header>
 	<body >	
-		<form action="passHandler.php" method="post">
+		<form action="<?php echo htmlspecialchars(passHandler.php);?>" method="post">
 			Enter Password Below <br>
 			<input type="password" name="pass" maxlength="10">
 			<input type="submit">
