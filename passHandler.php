@@ -10,7 +10,7 @@
 	<?php
 		//password variable
 		$password = "bo";
-		if ($_POST["pass"] == $password)
+		if ($_POST["pass"] == htmlspecialchars($password))
 		{
 			//setting session variable
 			$_SESSION["SecretKey"] = "enter";
