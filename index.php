@@ -7,13 +7,13 @@
 		<title>Password Page</title>
 	</header>
 	<body >	
-		<?php
+		<!--<?php
 			$gate = "enter";
 			if($_SESSION["SecretKey"] != $gate)
 			{
 				echo "<p style='color: red'> Please Enter Password Again... </p>"
 			}
-		?>
+		?>-->
 		<form action="passHandler.php" method="post">
 			Enter Password Below <br>
 			<input type="password" name="pass" maxlength="10">
