@@ -26,7 +26,7 @@
 				<div class="col-md-12">
 					<center>
 						<ul class="nav nav-tabs" style="text-align:center">
-							<li role="presentation"><a href="vidstream.php">Video Stream</a></li>
+							<li role="presentation"><a href="vidstream.py">Video Stream</a></li>
 							<li role="presentation" class="active"><a href="picstream.php">Picture Stream</a></li>
 							<li role="presentation"><a href="cgi-bin/config.py">Configuration</a></li>
 						</ul>
