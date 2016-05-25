@@ -9,7 +9,7 @@
 <h2>Checking...<h2>
 	<?php
 		//password variable
-		$password = htmlspecialchars("bo");
+		$password = "bo";
 		if ($_POST["pass"] == htmlspecialchars($password))
 		{
 			//setting session variable
