@@ -35,7 +35,7 @@
 			//Setting session variable
 			$_SESSION["SecretKey"] = "close";
 			
-			$attempt = $attempt + 1;
+			$attempt += 1;
 			
 			if($attempt == 3)
 			{
