@@ -1,5 +1,6 @@
 <?php
-	if(isset($_COOKIE[$banished]))
+	$cookieGuard = "banish";
+	if(isset($_COOKIE[$cookieGuard]))
 	{
 			echo "<script type = 'text/javascript'>\n";
 			echo  "window.location= 'https://www.google.com';\n";
