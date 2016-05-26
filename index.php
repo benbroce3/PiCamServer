@@ -14,7 +14,7 @@
 				echo "<p style = 'color:red;'> Please Enter Password Again... </p>";
 			}
 		?>
-		<form action="<?php echo htmlspecialchars(passHandler.php);?>" method="post">
+		<form action="<?php $page = passHandler.php; echo htmlspecialchars($page);?>" method="post">
 			Enter Password Below <br>
 			<input type="password" name="pass" maxlength="10">
 			<input type="submit">
