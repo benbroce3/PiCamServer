@@ -1,4 +1,5 @@
 #!/usr/bin python
+import cgitb; cgitb.enable()  # for troubleshooting
 
 import cgi
 print "Content-type:text/html\r\n\r\n"
