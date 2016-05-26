@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import cgi
-print "Content-Type: text/html"
+print "Content-type:text/html\r\n\r\n"
 print '''
 	<?php
 		session_start();
