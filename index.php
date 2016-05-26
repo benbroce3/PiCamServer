@@ -11,7 +11,7 @@
 			$gate = "enter";
 			if($_SESSION["SecretKey"] != $gate)
 			{
-				//echo "<p style='color: red'> Please Enter Password Again... </p>"
+				echo "<p style = 'color:red;'> Please Enter Password Again... </p>"
 			}
 		?>
 		<form action="passHandler.php" method="post">
