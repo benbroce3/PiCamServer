@@ -8,8 +8,8 @@
 	</header>
 	<body >	
 		<?php
-			$gate = "enter";
-			if($_SESSION["SecretKey"] != $gate)
+			$gate = "close";
+			if($_SESSION["SecretKey"] == $gate)
 			{
 				echo "<p style = 'color:red;'> Please Enter Password Again... </p>";
 			}
