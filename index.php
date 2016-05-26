@@ -1,5 +1,5 @@
 <?php
-//	session_start();
+	session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,11 +8,11 @@
 	</header>
 	<body >	
 		<?php
-		//	$gate = "enter";
-		//	if($_SESSION["SecretKey"] != $gate)
-		//	{
-		//		echo "<p style='color: red'> Please Enter Password Again... </p>"
-		//	}
+			$gate = "enter";
+			if($_SESSION["SecretKey"] != $gate)
+			{
+				echo "<p style='color: red'> Please Enter Password Again... </p>"
+			}
 		?>
 		<form action="passHandler.php" method="post">
 			Enter Password Below <br>
@@ -20,5 +20,5 @@
 			<input type="submit">
 		</form>
 	</body>
-	<!--<?php echo htmlspecialcharacters(passHandler.php);?>-->
+	
 </html>
