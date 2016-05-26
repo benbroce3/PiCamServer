@@ -3,10 +3,8 @@
 	$cookieGuard = "banish";
 	if(isset($_COOKIE[$cookieGuard]))
 	{
-			echo "<script type = 'text/javascript'>\n";
-			echo  "window.location= 'https://www.google.com';\n";
-			echo "</script>";
-			exit();
+		header('Location: www.google.com');
+		exit();
 	}
 	
 
