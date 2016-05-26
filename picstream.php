@@ -5,7 +5,7 @@
 	if($_SESSION["SecretKey"] != $keycheck) 
 	{
 		echo "<script type = 'text/javascript'>\n";
-		echo  "window.location = 'index.php';\n";
+		echo "window.location = 'index.php';\n";
 		echo "</script>";
 	}
 ?>
