@@ -1,5 +1,13 @@
 <?php
+	if(isset($_COOKIE[$banished]))
+	{
+			echo "<script type = 'text/javascript'>\n";
+			echo  "window.location= 'https://www.google.com';\n";
+			echo "</script>";
+			exit();
+	}
 	session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
