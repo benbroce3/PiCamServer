@@ -4,7 +4,8 @@
 	//check for attempts and then sets cookie
 	$doo = "banish";
 	$nono = 0;
-	if($_SESSION["DudeWhy"] == 1)
+	$bro = 1;
+	if($_SESSION["DudeWhy"] == $bro)
 	{
 		//set cookie, expire in 2 hours
 		setcookie($doo,$nono, time() + 7200, "/"); 
