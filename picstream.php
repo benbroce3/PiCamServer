@@ -25,9 +25,9 @@
 			<div class="row">
 				<div class="col-md-offset-4 col-md-4">
 					<ul class="nav nav-tabs" style="text-align:center">
-						<li role="presentation"><a href="cgi-bin/vidstream.py">Video Stream</a></li>
+						<li role="presentation"><a href="cgi-bin/vidstream.cgi">Video Stream</a></li>
 						<li role="presentation" class="active"><a href="picstream.php">Picture Stream</a></li>
-						<li role="presentation"><a href="cgi-bin/config.py">Configuration</a></li>
+						<li role="presentation"><a href="cgi-bin/config.cgi">Configuration</a></li>
 					</ul>
 				</div>
 				<div class="col-md-4">
