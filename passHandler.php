@@ -1,10 +1,13 @@
 <?php
 	//starting session
 	session_start();
+	//check for attempts and then sets cookie
+	$doo = "banish";
+	$nono = 0;
 	if($_SESSION["DudeWhy"] == 1)
 	{
 		//set cookie, expire in 2 hours
-		setcookie("banish",, time() + 7200, "/"); 
+		setcookie($doo,$nono, time() + 7200, "/"); 
 		$_SESSSION["DudeWhy"] = 0;
 	}
 ?>
@@ -29,9 +32,6 @@
 		}
 		else
 		{
-			//Counter Variable
-			
-			
 			//Setting session variable
 			$_SESSION["SecretKey"] = "close";
 			
@@ -40,6 +40,7 @@
 			if($attempt == 3)
 			{
 				$_SESSION["DudeWhy"] = 1;
+				$attempt = 0; 
 			}
 			echo "<script type = 'text/javascript'>\n";
 			echo  "window.location= 'index.php';\n";
