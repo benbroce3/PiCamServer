@@ -4,7 +4,7 @@
 	if(isset($_COOKIE[$cookieGuard]))
 	{
 		echo "<script type = 'text/javascript'>\n";
-		echo "window.location = 'www.google.com';\n";
+		echo "window.location = 'https://www.google.com';\n";
 		echo "</script>";
 	}
 	
