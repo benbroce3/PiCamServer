@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import cgi
 print "Content-type:text/html\r\n\r\n"
