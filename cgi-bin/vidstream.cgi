@@ -1,7 +1,9 @@
 #!/usr/bin/python
-import cgitb; cgitb.enable()  # for troubleshooting
 
 import cgi
+
+import cgitb; cgitb.enable()  # for troubleshooting
+
 print "Content-type:text/html\r\n\r\n"
 print '''
 	<?php
