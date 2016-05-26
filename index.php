@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	$cookieGuard = "banish";
 	if(isset($_COOKIE[$cookieGuard]))
 	{
@@ -7,7 +8,7 @@
 			echo "</script>";
 			exit();
 	}
-	session_start();
+	
 
 ?>
 <!DOCTYPE html>
