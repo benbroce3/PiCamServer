@@ -8,5 +8,5 @@ camera.rotation = 180
 
 camera.resolution = (640, 480)
 camera.start_recording('/var/www/PiCamServer/vids/vidstream.h264')
-time.sleep(60)
+camera.wait_recording(
 camera.stop_recording()
