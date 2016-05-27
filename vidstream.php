@@ -34,11 +34,12 @@
 				</div>
 			</div>
 			<!--Video-->
-	      		<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264" height="480" width="640"/>
+	      		<embed id="vid" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264" height="480" width="640"/>
+	      		<script>
+		      		document.getElementById('vid').addEventListener('loadedmetadata', function() {
+	  				this.currentTime = document.getElementById('vid').duration - 2;
+				}, false);
+			</script>
 		</div>
-		<!--<script>document.getElementById('vid1').addEventListener('loadedmetadata', function() {
-  		this.currentTime = 50;
-		}, false);
-		</script>-->
 	</body>
 </html>
