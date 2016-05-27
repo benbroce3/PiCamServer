@@ -35,7 +35,29 @@
 			</div>
 			<!--Pictures-->
 			<div class="row">
-				<?php
+				<?php	
+					//mySQL Variables
+					$sername = "localhost";
+					$user = "";
+					$pass = "";
+					
+					//Creating mySQL Connection
+					$net = new mysqli($sername, $user, $pass);
+					
+					//Checking for connection
+					if($net->connect_error)
+					{
+						die("Manhunt failed:" .$net->connect_error);	
+					}
+					
+					//Creating mySQL DB
+					$sqlDB = "CREATE DATABASE picDB";
+					//Checking for successful creation of DB
+					if($net->query($sqlDB) === FALSE)					
+					{
+						echo "Picture DB has died: " .$net->error;
+					}
+					
 					//make reversed (chrono) array of image filenames
 					$dirname = "pics/";
 					$images = array_reverse(glob($dirname."*.jpg"));
