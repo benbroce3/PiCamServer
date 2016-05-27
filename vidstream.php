@@ -39,7 +39,7 @@
 			</center>
 	      		<script>
 		      		//document.getElementById("vid").addEventListener('loadedmetadata', function() {
-	  			document.getElementById("vid").currentTime = 120//(document.getElementById("vid").duration - 2);
+	  			document.getElementById("vid").currentTime = 20//(document.getElementById("vid").duration - 2);
 				//}, false);
 			</script>
 		</div>
