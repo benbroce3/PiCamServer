@@ -36,5 +36,9 @@
 			<!--Video-->
 	      		<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264" height="480" width="640"/>
 		</div>
+		<!--<script>document.getElementById('vid1').addEventListener('loadedmetadata', function() {
+  		this.currentTime = 50;
+		}, false);
+		</script>-->
 	</body>
 </html>
