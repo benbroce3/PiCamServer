@@ -35,11 +35,13 @@
 			</div>
 			<!--Video-->
 			<center>
-	      			<embed id="vid" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264" height="480" width="640"/>
+	      			<video id="vid" height="480" width="640"/>
+	      				<source>src="vids/vidstream.h264" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org"</source>
+	      			</video
 			</center>
 	      		<script>
 		      		//document.getElementById("vid").addEventListener('loadedmetadata', function() {
-	  			document.getElementById("vid").currentTime = 20//(document.getElementById("vid").duration - 2);
+	  			//document.getElementById("vid").currentTime = 20//(document.getElementById("vid").duration - 2);
 				//}, false);
 			</script>
 		</div>
