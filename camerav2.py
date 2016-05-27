@@ -23,7 +23,7 @@ camera.annotate_background = picamera.Color('black')
 while (counter <= length):
 	timestamp = datetime.now().strftime("%m-%d-%Y_%H:%M:%S")
 	camera.annotate_text = timestamp
-        path = '../../../../var/www/html/PiCamServer/pics/' + timestamp + '.jpg'
+        path = '/var/www/PiCamServer/pics/' + timestamp + '.jpg'
         camera.capture(path)
         camera.start_preview()
         time.sleep(interval)
