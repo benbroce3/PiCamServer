@@ -1,3 +1,4 @@
+import picamera
 from picamera import PiCamera
 
 with picamera.PiCamera() as camera:
