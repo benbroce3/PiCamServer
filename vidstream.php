@@ -34,9 +34,7 @@
 				</div>
 			</div>
 			<!--Video-->
-	      		<video width="640" height="480" autoplay>
-	       		<source src="vids/vidstream.mp4" type="video/mp4">
-	     		</video>
+	      		<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264" height="480" width="640"/>
 		</div>
 	</body>
 </html>
