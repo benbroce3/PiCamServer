@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Picture Stream</title>
+		<title>Video Stream</title>
 		<!--Bootstrap Setup-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
@@ -25,8 +25,8 @@
 			<div class="row">
 				<div class="col-md-offset-4 col-md-4">
 					<ul class="nav nav-tabs" style="text-align:center">
-						<li role="presentation"><a href="vidstream.php">Video Stream</a></li>
-						<li role="presentation" class="active"><a href="picstream.php">Picture Stream</a></li>
+						<li role="presentation" class="active"><a href="vidstream.php">Video Stream</a></li>
+						<li role="presentation"><a href="picstream.php">Picture Stream</a></li>
 						<li role="presentation"><a href="cgi-bin/config.cgi">Configuration</a></li>
 					</ul>
 				</div>
@@ -34,11 +34,13 @@
 				</div>
 			</div>
 			<!--Video-->
-	      		<embed id="vid" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264" height="480" width="640"/>
+			<center>
+	      			<embed id="vid" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264" height="480" width="640"/>
+			</center>
 	      		<script>
-		      		document.getElementById('vid').addEventListener('loadedmetadata', function() {
-	  				this.currentTime = document.getElementById('vid').duration - 2;
-				}, false);
+		      		//document.getElementById("vid").addEventListener('loadedmetadata', function() {
+	  			this.currentTime = (document.getElementById("vid").duration - 2);
+				//}, false);
 			</script>
 		</div>
 	</body>
