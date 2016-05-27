@@ -35,7 +35,7 @@
 			</div>
 			<!--Video-->
 	      		<video width="640" height="480" autoplay>
-	       		<source src="vidstream.mp4" type="video/mp4">\
+	       		<source src="vidstream.mp4 type="video/mp4">
 	     		</video>
 		</div>
 	</body>
