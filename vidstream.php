@@ -35,7 +35,7 @@
 			</div>
 			<!--Video-->
 			<center>
-				<embed showcontrols="true" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="/var/www/PiCamServer/vids/vidstream.h264" />
+				<embed showcontrols="true" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264" />
 			</center>
 	      		<script>
 		      		//document.getElementById("vid").addEventListener('loadedmetadata', function() {
