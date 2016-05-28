@@ -9,9 +9,9 @@ counter = 0
 
 camera.rotation = 180
 
-print "Security Camera Logger v1 : by Ben Broce & William Hampton\n\n"
+print "Security Camera Logger v2 : by Ben Broce & William Hampton\n\n"
 print "Will display video feed & capture images at a given interval."
-print "Images go to /home/pi/camlog, Alt-F4 closes feed, Ctrl-C quits.\n\n"
+print "Images go to pics/[timestamp].jpg, Ctrl-C quits.\n\n"
 
 length = raw_input("How long should I run (in minutes): ")
 length = float(length)*60
