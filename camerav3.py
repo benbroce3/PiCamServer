@@ -10,25 +10,26 @@ counter = 0
 camera.rotation = 180
 camera.resolution = (640, 480)
 
-print "Security Camera Logger v1 : by Ben Broce & William Hampton\n\n"
-print "Will display video feed & capture images at a given interval."
-print "Images go to /home/pi/camlog, Alt-F4 closes feed, Ctrl-C quits.\n\n"
+print "\nSecurity Camera Logger v3 | Ben Broce & William Hampton\n\n"
+print "Streams video to vids/vidstream.h264 | Captures to pics/[timestamp].jpg"
+print "Ctrl-C quits. Ctrl-Z kills. AVOID USING IF STREAMING!\n\n"
 
-length = raw_input("How long should I run (in minutes): ")
-length = float(length)*60
-interval = raw_input("How often should I take a picture (in seconds): ")
-interval = float(interval)
+stream = raw_input("Should I stream video (y/n)? ")
+length = float(raw_input("How long should I run (in minutes): "))*60
+interval = float(raw_input("How often should I take a picture (in seconds): "))
 
 camera.annotate_background = picamera.Color('black')
 
 camera.start_preview()
-camera.start_recording('/var/www/PiCamServer/vids/vidstream.h264')
+if stream == "y":
+  camera.start_recording('/var/www/PiCamServer/vids/vidstream.h264')
 while (counter <= length):
   timestamp = datetime.now().strftime("%m-%d-%Y_%H:%M:%S")
   camera.annotate_text = timestamp
   path = '/var/www/PiCamServer/pics/' + timestamp + '.jpg'
   camera.capture(path, use_video_port=True)
-  camera.wait_recording(interval)
+  time.sleep(interval)
   counter += interval
-camera.stop_recording()
+if stream == "y":
+  camera.stop_recording()
 camera.stop_preview()
