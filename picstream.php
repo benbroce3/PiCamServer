@@ -45,6 +45,7 @@
 						echo'
 							<div class="col-md-4">
 								<img src="'.$image.'" style="max-width:100%;max-height:100%;">
+								<br>
 							</div>
 						';
 					}
