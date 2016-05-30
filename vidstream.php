@@ -37,11 +37,11 @@
 			<center>
 				<object id="vlc" height="480" width="640">
 					<param name="StartTime" value="40"/>
-					<embed controls="true" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264"/>
+					<embed toolbar="true" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" name="vlc" target="vids/vidstream.h264" height="480" width="640"/>
 				</object>
 			</center>
 	      		<script>
-	      			var vlc = document.getElementById("vlc");
+	      			//var vlc = document.getElementById("vlc");
 	      			//https://wiki.videolan.org/Documentation:WebPlugin/
 	      			//http://stackoverflow.com/questions/14375767/embedding-vlc-plugin-on-html-page
 	      			//vlc.input.time = vlc.input.length - 3;
