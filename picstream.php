@@ -40,24 +40,35 @@
 					$sername = "localhost";
 					$user = "";
 					$pass = "";
+					$dbname = "picDB";
 					
 					//Creating mySQL Connection
-					$net = new mysqli($sername, $user, $pass);
+					$net = mysqli_connect($sername, $user, $pass, $dbname);
 					
 					//Checking for connection
-					if($net->connect_error)
+					if(!$net)
 					{
-						die("Manhunt failed:" .$net->connect_error);	
+						die("Manhunt failed:" .mysqli_connect_error);	
 					}
 					
 					//Creating mySQL DB
 					$sqlDB = "CREATE DATABASE picDB";
+					
 					//Checking for successful creation of DB
-					if($net->query($sqlDB) === FALSE)					
+					if(!mysqli_query($net, $sqlDB))					
 					{
-						echo "Picture DB has died: " .$net->error;
+						echo "Picture DB has died: " .mysqli_error($net);
 					}
 					
+					//create table
+					$sqlTB = "CREATE TABLE day1TB(
+						id INT(4) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+						name VARHCAR(30),
+						photo VARBINARY(max),
+						date TIME_STAMP
+						)";
+						
+					mysqli_close($net);
 					//make reversed (chrono) array of image filenames
 					$dirname = "pics/";
 					$images = array_reverse(glob($dirname."*.jpg"));
