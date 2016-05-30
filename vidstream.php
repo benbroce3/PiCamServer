@@ -37,7 +37,7 @@
 			<center>
 				<object id="vlc" height="480" width="640">
 					<param name="StartTime" value="40"/>
-					<embed toolbar="true" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" name="vlc" target="vids/vidstream.h264" height="480" width="640"/>
+					<embed toolbar="true" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" name="vlc" target="../vids/vidstream.h264" height="480" width="640"/>
 				</object>
 			</center>
 	      		<script>
