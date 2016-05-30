@@ -67,6 +67,9 @@
 						photo VARBINARY(max),
 						date TIME_STAMP
 						)";
+					INSERT INTO day1TB(photo)
+					SELECT BulkColumn
+					FROM Openrowset( Bulk)
 						
 					mysqli_close($net);
 					//make reversed (chrono) array of image filenames
