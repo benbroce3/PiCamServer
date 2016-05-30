@@ -37,7 +37,7 @@
 			<div class="row">
 				<?php
 					//make reversed (chrono) array of image filenames
-					$dirname = "pics/";
+					$dirname = "../pics/";
 					$images = array_reverse(glob($dirname."*.jpg"));
 					//recursively display all images in "pics" dir
 					//formatted into 3 columns with timestamps beneath
