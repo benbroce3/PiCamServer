@@ -41,8 +41,9 @@
 	      			var vlc = document.getElementById("vlc");
 	      			//https://wiki.videolan.org/Documentation:WebPlugin/
 	      			//http://stackoverflow.com/questions/14375767/embedding-vlc-plugin-on-html-page
-	      			//vlc.input.time = vid.vlc.input.length - 3;
-	      			vlc.input.position = 0.9;
+	      			//vlc.input.time = vlc.input.length - 3;
+	      			//vlc.input.position = 0.9;
+	      			vlc.input.time = 40;
 			</script>
 		</div>
 	</body>
