@@ -27,7 +27,7 @@ camera.annotate_background = picamera.Color('black')
 try:
   camera.start_preview()
   if stream == "y":
-    camera.start_recording('/var/www/PiCamServer/vids/vidstream.h264')
+    camera.start_recording('/var/www/vids/vidstream.h264')
   while (counter <= length):
     timestamp = datetime.now().strftime("%m-%d-%Y_%H:%M:%S")
     camera.annotate_text = timestamp
