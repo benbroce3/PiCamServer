@@ -35,7 +35,7 @@
 			</div>
 			<!--Video-->
 			<center>
-				<embed id="vlc" controls="true" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264" height="480" width="640"/>
+				<embed id="vlc" controls="true" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264" height="480" width="640" script="vlc.input.time = 40;"/>
 			</center>
 	      		<script>
 	      			var vlc = document.getElementById("vlc");
@@ -43,7 +43,6 @@
 	      			//http://stackoverflow.com/questions/14375767/embedding-vlc-plugin-on-html-page
 	      			//vlc.input.time = vlc.input.length - 3;
 	      			//vlc.input.position = 0.9;
-	      			vlc.vlc.input.time = 40;
 			</script>
 		</div>
 	</body>
