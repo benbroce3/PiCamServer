@@ -35,7 +35,10 @@
 			</div>
 			<!--Video-->
 			<center>
-				<embed id="vlc" controls="true" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264" height="480" width="640" script="vlc.input.time = 40;"/>
+				<object id="vlc" height="480" width="640">
+					<param name="StartTime" value="40"/>
+					<embed controls="true" type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="vids/vidstream.h264"/>
+				</object>
 			</center>
 	      		<script>
 	      			var vlc = document.getElementById("vlc");
