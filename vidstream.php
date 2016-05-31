@@ -37,13 +37,6 @@
 			<center>
 				<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" target="rtsp://192.168.0.236:8554/" height="480" width="640"/>
 			</center>
-	      		<script>
-	      			//var vlc = document.getElementById("vlc");
-	      			//https://wiki.videolan.org/Documentation:WebPlugin/
-	      			//http://stackoverflow.com/questions/14375767/embedding-vlc-plugin-on-html-page
-	      			//vlc.input.time = vlc.input.length - 3;
-	      			//vlc.input.position = 0.9;
-			</script>
 		</div>
 	</body>
 </html>
