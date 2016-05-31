@@ -3,13 +3,7 @@ from picamera import PiCamera
 import time
 from datetime import datetime
 import os.path
-from subprocess import call
-
-camera = PiCamera()
-counter = 0
-
-camera.rotation = 180
-camera.resolution = (640, 480)
+from subprocess32 import call
 
 print "\nSecurity Camera Logger v3 | Ben Broce & William Hampton\n\n"
 print "Streams video to vids/vidstream.h264 | Captures to pics/[timestamp].jpg"
@@ -21,12 +15,18 @@ interval = float(raw_input("How often should I take a picture (in seconds): "))
 
 print "Running..."
 
+if stream == "y":
+	call(["./livestream.sh"])
+
+camera = PiCamera()
 camera.annotate_background = picamera.Color('black')
+camera.rotation = 180
+camera.resolution = (640, 480)
+
+counter = 0
 
 try:
 	camera.start_preview()
-	if stream == "y":
-		call(["./livestream.sh"])
 	while (counter <= length):
 		timestamp = datetime.now().strftime("%m-%d-%Y_%H:%M:%S")
 		camera.annotate_text = timestamp
