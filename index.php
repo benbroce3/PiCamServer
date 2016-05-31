@@ -12,9 +12,9 @@
 ?>
 <!DOCTYPE html>
 <html>
-	<header>
+	<head>
 		<title>Password Page</title>
-	</header>
+	</head>
 	<body >	
 		<?php
 			$gate = "close";
