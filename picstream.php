@@ -25,8 +25,8 @@
 			<div class="row">
 				<div class="col-md-offset-4 col-md-4">
 					<ul class="nav nav-tabs" style="text-align:center">
-						<li role="presentation" class="active"><a href="vidstream.php">Video Stream</a></li>
-						<li role="presentation"><a href="picstream.php">Picture Stream</a></li>
+						<li role="presentation"><a href="cgi-bin/vidstream.cgi">Video Stream</a></li>
+						<li role="presentation" class="active"><a href="picstream.php">Picture Stream</a></li>
 						<li role="presentation"><a href="cgi-bin/config.cgi">Configuration</a></li>
 					</ul>
 				</div>
@@ -35,9 +35,10 @@
 			</div>
 			<!--Pictures-->
 			<div class="row">
-				<?php
-					//make reversed (chrono) array of image filenames
-					$dirname = "pics/"
+				<?php	
+					
+				
+					$dirname = "pics/";
 					$images = array_reverse(glob($dirname."*.jpg"));
 					//recursively display all images in "pics" dir
 					//formatted into 3 columns with timestamps beneath
@@ -46,6 +47,7 @@
 							<div class="col-md-4">
 								<img src="'.$image.'" style="max-width:100%;max-height:100%;">
 								<br>
+								<center><h3>'.$image.'</h3></center>
 							</div>
 						';
 					}
