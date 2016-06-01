@@ -15,6 +15,9 @@ interval = float(raw_input("How often should I take a picture (in seconds): "))
 
 print "Running..."
 
+#http://www.raspberry-projects.com/pi/pi-hardware/raspberry-pi-camera/streaming-video-using-vlc-player
+#http://www.diveintopython.net/scripts_and_streams/stdin_stdout_stderr.html
+#Ouput video (record) => stream => stdout => | => cvlc livestream => browser
 if stream == "y":
 	Popen(["./livestream.sh"])
 
