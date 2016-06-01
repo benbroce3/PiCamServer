@@ -40,14 +40,10 @@
 					//recursively display all images in "pics" dir
 					//formatted into 3 columns with timestamps beneath
 					foreach($images as $image) {
-						$content = file_get_contents($image);
+						//$content = file_get_contents($image);
 						echo'
 							<div class="col-md-4">
-						';
-						header('Content-type: image/jpeg');
-						echo $contents;
-						echo'
-								<!--<img src="'.$image.'" style="max-width:100%;max-height:100%;">-->
+								<img src="'.$image.'" style="max-width:100%;max-height:100%;">
 								<br>
 							</div>
 						';
