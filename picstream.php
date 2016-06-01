@@ -36,10 +36,7 @@
 			<!--Pictures-->
 			<div class="row">
 				<?php	
-					
-				
-					$dirname = "pics/";
-					$images = array_reverse(glob($dirname."*.jpg"));
+					$images = array_reverse(glob("../pics/*.jpg"));
 					//recursively display all images in "pics" dir
 					//formatted into 3 columns with timestamps beneath
 					foreach($images as $image) {
