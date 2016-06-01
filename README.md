@@ -13,3 +13,6 @@ Instructions:
 	<li>Start PHP</li>
 	<li>Go to IP of the pi in browser of computer on the same network</li>
 </ol>
+
+Implement for named localhost (ex. "picam" vs "192.168.0.236")
+https://blog.gaya.ninja/articles/faking-a-top-level-domain-name-for-local-development-with-apache/
