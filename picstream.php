@@ -43,7 +43,14 @@
 						//$content = file_get_contents($image);
 						echo'
 							<div class="col-md-4">
-								<img src="'.$image.'" style="max-width:100%;max-height:100%;">
+						';
+						// Set the content type header - in this case image/jpeg
+						header('Content-Type: image/jpeg');
+						// Output the image
+						imagejpeg($image);
+						// Free up memory
+						imagedestroy($im);
+						echo'
 								<br>
 							</div>
 						';
