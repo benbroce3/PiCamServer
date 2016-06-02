@@ -36,7 +36,7 @@
 			<!--Pictures-->
 			<div class="row">
 				<?php
-					$image = "../pics/05-31-2016_15:32:04.jpg"
+					$image = "../pics/05-31-2016_15:32:04.jpg";
 					// Set the content type header - in this case image/jpeg
 					header('Content-Type: image/jpeg');
 					// Output the image
