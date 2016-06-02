@@ -41,14 +41,14 @@
 					//formatted into 3 columns with timestamps beneath
 					foreach($images as $image) {
 						//$content = file_get_contents($image);
-						echo '<div class="col-md-4">';
+						//echo '<div class="col-md-4">';
 						// Set the content type header - in this case image/jpeg
 						header('Content-Type: image/jpeg');
 						// Output the image
 						imagejpeg($image);
 						// Free up memory
 						imagedestroy($im);
-						echo '<br></div>';
+						//echo '<br></div>';
 					}
 				?>
 				<script>
