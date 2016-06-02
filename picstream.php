@@ -35,8 +35,15 @@
 			</div>
 			<!--Pictures-->
 			<div class="row">
-				<?php	
-					$images = array_reverse(glob("../pics/*.jpg"));
+				<?php
+					$image = "../pics/05-31-2016_15:32:04.jpg"
+					// Set the content type header - in this case image/jpeg
+					header('Content-Type: image/jpeg');
+					// Output the image
+					imagejpeg($image);
+					// Free up memory
+					imagedestroy($image);
+					/*$images = array_reverse(glob("../pics/*.jpg"));
 					//recursively display all images in "pics" dir
 					//formatted into 3 columns with timestamps beneath
 					foreach($images as $image) {
@@ -49,7 +56,7 @@
 						// Free up memory
 						imagedestroy($image);
 						//echo '<br></div>';
-					}
+					}*/
 				?>
 				<script>
 					window.setInterval(myTimer, 10000);
