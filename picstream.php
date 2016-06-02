@@ -47,7 +47,7 @@
 						// Output the image
 						imagejpeg($image);
 						// Free up memory
-						imagedestroy($im);
+						imagedestroy($image);
 						//echo '<br></div>';
 					}
 				?>
