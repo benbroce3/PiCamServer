@@ -4,7 +4,7 @@
 	if(isset($_COOKIE[$cookieGuard]))
 	{
 		echo "<script type = 'text/javascript'>\n";
-		echo "window.location = 'https://www.google.com';\n";
+		echo "window.location = 'http://www.wikihow.com/Remember-a-Forgotten-Password';\n";
 		echo "</script>";
 	}
 	
