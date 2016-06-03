@@ -5,7 +5,7 @@ from datetime import datetime
 import os.path
 from subprocess32 import Popen
 
-print "Security Camera Logger v4 | Ben Broce & William Hampton\n\n"
+print "\nSecurity Camera Logger v4 | Ben Broce & William Hampton\n"
 print "Streams video to rtsp://pi-ip:8554/ | Captures to pics/[timestamp].jpg"
 print "Ctrl-C quits.\n\n"
 
