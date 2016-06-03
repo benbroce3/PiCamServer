@@ -17,9 +17,9 @@ print "Running..."
 #http://www.diveintopython.net/scripts_and_streams/stdin_stdout_stderr.html
 #Ouput video (record) => stream => stdout => | => cvlc livestream => browser
 
-if stream == ("v" or "V"):
+if (stream == "v" or stream == "V"):
 	Popen(["./livestream.sh"])
-elif stream == ("p" or "P"):
+elif (stream == "p" or stream == "P"):
 	length = float(raw_input("How long should I run (in minutes): "))*60
 	interval = float(raw_input("How often should I take a picture (in seconds): "))
 	
