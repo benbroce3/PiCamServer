@@ -1,6 +1,7 @@
 <?php
   header('Content-Type: image/jpeg');
-  $image = "../pics/05-31-2016_15:32:04.jpg";
+  $image = "05-31-2016_15:31:51.jpg";
+  //$image = "../pics/05-31-2016_15:32:04.jpg";
   $src = imagecreatefromjpeg($image);
   $new_width=480;
   $new_height=360;
