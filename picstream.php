@@ -34,9 +34,9 @@
 				</div>
 			</div>
 			<!--Pictures-->
-			<<div class="row">
-			<?php
-			//make reversed (chrono) array of image filenames
+			<div class="row">
+				<?php
+					//make reversed (chrono) array of image filenames
 					$dirname = "pics/";
 					$images = array_reverse(glob($dirname."*.jpg"));
 					//recursively display all images in "pics" dir
@@ -51,14 +51,14 @@
 						';
 					}
 				?>
-				<script>
-					window.setInterval(myTimer, 10000);
-					function myTimer()
-					{
-						location.reload();
-					}
-				</script>
 			</div>
 		</div>
+		<script>
+			window.setInterval(myTimer, 10000);
+			function myTimer()
+			{
+				location.reload();
+			}
+		</script>
 	</body>
 </html>
