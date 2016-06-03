@@ -23,13 +23,11 @@
 		<div class="container-fluid">
 			<!--Navigation Tabs-->
 			<div class="row">
-				<div class="col-md-offset-4 col-md-4">
-					<center>
-						<ul class="nav nav-tabs" style="text-align:center">
-							<li role="presentation"><a href="vidstream.php">Video Stream</a></li>
-							<li role="presentation" class="active"><a href="picstream.php">Picture Stream</a></li>
-						</ul>
-					</center>
+				<div class="col-md-offset-5 col-md-4">
+					<ul class="nav nav-tabs" style="text-align:center">
+						<li role="presentation" class="active"><a href="vidstream.php">Video Stream</a></li>
+						<li role="presentation"><a href="picstream.php">Picture Stream</a></li>
+					</ul>
 				</div>
 				<div class="col-md-4">
 				</div>
