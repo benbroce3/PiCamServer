@@ -7,7 +7,7 @@ from subprocess32 import Popen
 
 print "\nSecurity Camera Logger v4 | Ben Broce & William Hampton\n"
 print "Streams video to rtsp://pi-ip:8554/ | Captures to pics/[timestamp].jpg"
-print "Ctrl-C quits.\n\n"
+print "Ctrl-C quits.\n"
 
 stream = raw_input("Should I stream video or take pictures (v/p)? ")
 
