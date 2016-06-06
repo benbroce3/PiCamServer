@@ -50,7 +50,7 @@
 				?>
 			</div>
 			
-			
+			<!--
 			<!--PHP accordion child function-->
 			<?php
 				//'.$image.'
@@ -91,7 +91,7 @@
 				$mydate=getdate(date("U"));
 				echo "$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
 			?>
-			
+			-->
 		</div>
 		<script>
 			window.setInterval(myTimer, 10000);
