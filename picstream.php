@@ -23,7 +23,7 @@
 		<div class="container-fluid">
 			<!--Navigation Tabs-->
 			<div class="row">
-				<div class="col-md-12"
+				<div class="col-md-12">
 					<ul class="nav nav-tabs" style="text-align:center; margin-left:50%; margin-right:50%">
 						<li role="presentation"><a href="vidstream.php">Video Stream</a></li>
 						<li role="presentation" class="active"><a href="picstream.php">Picture Stream</a></li>
