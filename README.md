@@ -51,3 +51,5 @@ _____________________
 		Order allow,deny
 		allow from all
 	</Directory>
+-change ip in vidstream to your pi???
+-
