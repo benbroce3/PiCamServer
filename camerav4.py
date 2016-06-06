@@ -10,6 +10,7 @@ print "Streams video to rtsp://pi-ip:8554/ | Captures to pics/[timestamp].jpg"
 print "Ctrl-C quits.\n"
 
 stream = raw_input("Should I stream video or take pictures (v/p)? ")
+preview = raw_input("Should I display video preview on Pi (y/n)? ")
 
 print "Running..."
 
@@ -18,7 +19,11 @@ print "Running..."
 #Ouput video (record) => stream => stdout => | => cvlc livestream => browser
 
 if (stream == "v" or stream == "V"):
-	Popen(["./livestream.sh"])
+	try:
+		Popen(["./livestream.sh"])
+	finally:
+		print "\n\nExiting..."
+		Popen.terminate()
 elif (stream == "p" or stream == "P"):
 	length = float(raw_input("How long should I run (in minutes): "))*60
 	interval = float(raw_input("How often should I take a picture (in seconds): "))
@@ -31,7 +36,8 @@ elif (stream == "p" or stream == "P"):
 	counter = 0
 	
 	try:
-		camera.start_preview()
+		if (preview == "y" or preview == "Y"):
+			camera.start_preview()
 		while (counter <= length):
 			timestamp = datetime.now().strftime("%m-%d-%Y_%H:%M:%S")
 			camera.annotate_text = timestamp
@@ -41,6 +47,7 @@ elif (stream == "p" or stream == "P"):
 			counter += interval
 	finally:
 		print "Exiting..."
-		camera.stop_preview()
+		if (preview == "y" or preview == "Y"):
+			camera.stop_preview()
 else:
 	print "Invalid input!"
