@@ -40,4 +40,14 @@ _____________________
 	-change documentRoot to /var/www/PiCamServer
 	-after documentroot, put:
 	
-		
+	DirectoryIndex index.php index.html
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/www/PiCamServer>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
