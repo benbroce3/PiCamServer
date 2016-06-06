@@ -16,3 +16,28 @@ Instructions:
 
 Implement for named localhost (ex. "picam" vs "192.168.0.236")
 https://blog.gaya.ninja/articles/faking-a-top-level-domain-name-for-local-development-with-apache/
+
+
+
+-flash img to sd card
+-expand filesystem
+-
+
+
+_____________________
+
+
+-get latest jessie
+-overclock to "high"
+-remove unnecessary programs
+-configure to liking
+-install apache2 & php5 (see raspberrypi.org doc)
+-remove the /var/www/html folder
+-git clone into /var/www/PiCamServer
+-git fetch & git pull
+-create folder "/var/www/PiCamServer/pics" with 777 (-R) permissions
+-in /etc/apache2/sites-available/000-default.conf :
+	-change documentRoot to /var/www/PiCamServer
+	-after documentroot, put:
+	
+		
