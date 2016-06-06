@@ -49,6 +49,49 @@
 					}
 				?>
 			</div>
+			
+			
+			<!--PHP accordion child function-->
+			<?php
+				//'.$image.'
+				function picsFold() {
+					echo'
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										Collapsible Group Item #1
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body">
+									content here
+								</div>
+							</div>
+						</div>
+					';
+				}
+			?>
+			
+			
+			<!--Accordion Parent-->
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<?php
+					picsFold();
+				?>
+			</div>
+			
+			<!--Grab DateTime-->
+			<?php
+				// Print the array from getdate()
+				print_r(getdate());
+				echo "<br><br>";
+				// Return date/time info of a timestamp; then format the output
+				$mydate=getdate(date("U"));
+				echo "$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
+			?>
+			
 		</div>
 		<script>
 			window.setInterval(myTimer, 10000);
