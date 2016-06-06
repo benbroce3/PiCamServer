@@ -20,10 +20,10 @@ print "Running..."
 
 if (stream == "v" or stream == "V"):
 	try:
-		Popen(["./livestream.sh"])
+		live = Popen(["./livestream.sh"])
 	finally:
 		print "\n\nExiting..."
-		Popen.terminate()
+		live.terminate()
 elif (stream == "p" or stream == "P"):
 	length = float(raw_input("How long should I run (in minutes): "))*60
 	interval = float(raw_input("How often should I take a picture (in seconds): "))
