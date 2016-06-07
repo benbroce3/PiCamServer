@@ -88,6 +88,7 @@
 			<?php
 				//grab date & time
 				$today = getdate(date("U"));
+				$epoch = date("U")
 				$day = $today[mday];
 				$weekday = $today[weekday];
 				$month = $today[month];
