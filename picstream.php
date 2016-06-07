@@ -32,6 +32,10 @@
 			</div>
 			<!--Pictures-->
 			<?php
+				//grab date & time
+				$epoch = date("U");
+				$today = getdate($epoch);
+				
 				//Glob & display images in Bootstrap "col-md-4"s
 				function showPics($picRegEx)
 				{
@@ -47,6 +51,7 @@
 						';
 					}
 				}
+				
 				//PHP Bootstrap Accordion Child
 				function picsFold($foldNum, $foldRegEx) {
 					echo'
@@ -83,17 +88,6 @@
 					picsFold("Five");
 				?>
 			</div>
-
-
-			<?php
-				//grab date & time
-				$today = getdate(date("U"));
-				$epoch = date("U")
-				$day = $today[mday];
-				$weekday = $today[weekday];
-				$month = $today[month];
-				
-			?>
 		</div>
 		<script>
 			window.setInterval(myTimer, 10000);
