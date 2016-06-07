@@ -4,16 +4,15 @@ import picamera
 from picamera import PiCamera
 import time
 from datetime import datetime
-import os.path
 from subprocess import Popen
 
 print("\nPiCamServer Camera Backend v5\n")
 print("Streams video to rtsp://pi-ip:8554/ | Captures to pics/[timestamp].jpg")
 print("Ctrl-C quits.\n")
 
-config_now = input("Configure session settings now (y/n)? ")
-stream = input("Should I stream video or take pictures (v/p)? ")
-preview = input("Should I display video preview on Pi (y/n)? ")
+configNow = input("Configure session settings now (y/n)? ").lower()
+stream = input("Should I stream video or take pictures (v/p)? ").lower()
+preview = input("Should I display video preview on Pi (y/n)? ").lower()
 
 print("Running...")
 
@@ -21,13 +20,13 @@ print("Running...")
 #http://www.diveintopython.net/scripts_and_streams/stdin_stdout_stderr.html
 #Ouput video (record) => stream => stdout => | => cvlc livestream => browser
 
-if (stream == "v" or stream == "V"):
+if (stream == "v"):
 	try:
 		live = Popen(["./livestream.sh"])
 	finally:
 		print("\n\nExiting...")
 		live.terminate()
-elif (stream == "p" or stream == "P"):
+elif (stream == "p"):
 	length = float(input("How long should I run (in minutes): "))*60
 	interval = float(input("How often should I take a picture (in seconds): "))
 	
@@ -39,7 +38,7 @@ elif (stream == "p" or stream == "P"):
 	counter = 0
 	
 	try:
-		if (preview == "y" or preview == "Y"):
+		if (preview == "y"):
 			camera.start_preview()
 		while (counter <= length):
 			timestamp = datetime.now().strftime("%m-%d-%Y_%H:%M:%S")
@@ -50,7 +49,7 @@ elif (stream == "p" or stream == "P"):
 			counter += interval
 	finally:
 		print("Exiting...")
-		if (preview == "y" or preview == "Y"):
+		if (preview == "y"):
 			camera.stop_preview()
 else:
 	print("Invalid input!")
