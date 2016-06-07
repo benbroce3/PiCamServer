@@ -29,44 +29,42 @@
 						<li role="presentation" style="float:none; display:inline-block;" class="active"><a href="picstream.php">Picture Stream</a></li>
 					</ul>
 				</div>
-			</div
+			</div>
 			<!--Pictures-->
-			<div class="row">
-				<?php
-					//make reversed (chrono) array of image filenames
-					$dirname = "pics/";
-					$images = array_reverse(glob($dirname."*.jpg"));
-					//recursively display all images in "pics" dir
-					//formatted into 3 columns with timestamps beneath
+			<?php
+				//
+				function showPics($picRegEx)
+				{
+					//make reversed (chrono) array of images filenames matching $picRegEx
+					$images = array_reverse(glob("pics/".$picRegEx.".jpg"));
+					//recursively display matching images
 					foreach($images as $image) {
 						echo'
 							<div class="col-md-4">
-								<img src="'.$image.'" style="max-width:100%;max-height:100%;">
+								<img src="'.$image.'" style="max-width:100%; max-height:100%;">
 								<br>
-								<center><h3>'.$image.'</h3></center>
 							</div>
 						';
 					}
-				?>
-			</div>
-			
-			<!--
-			<!--PHP accordion child function-->
-			<?php
-				//'.$image.'
-				function picsFold() {
+				}
+				//PHP Bootstrap Accordion Child
+				function picsFold($foldNum, $foldRegEx) {
 					echo'
 						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingOne">
+							<div class="panel-heading" role="tab" id="heading'.$foldNum.'">
 								<h4 class="panel-title">
-									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-										Collapsible Group Item #1
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'.$foldNum.'" aria-expanded="true" aria-controls="collapse'.$foldNum.'">
+										LABEL
 									</a>
 								</h4>
 							</div>
-							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+							<div id="collapse'.$foldNum.'" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading'.$foldNum.'">
 								<div class="panel-body">
-									content here
+									<div class="row">
+					';
+										showPics($foldRegEx);
+					echo'
+									</div>
 								</div>
 							</div>
 						</div>
@@ -75,23 +73,24 @@
 			?>
 			
 			
-			<!--Accordion Parent-->
+			<!--PHP Bootstrap Accordion Parent-->
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 				<?php
-					picsFold();
+					picsFold("One");
+					picsFold("Two");
+					picsFold("Three");
+					picsFold("Four");
+					picsFold("Five");
 				?>
 			</div>
 			
 			<!--Grab DateTime-->
 			<?php
-				// Print the array from getdate()
-				print_r(getdate());
-				echo "<br><br>";
-				// Return date/time info of a timestamp; then format the output
 				$mydate=getdate(date("U"));
 				echo "$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
 			?>
-			-->
+			
+			
 		</div>
 		<script>
 			window.setInterval(myTimer, 10000);
