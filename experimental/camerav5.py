@@ -41,9 +41,12 @@ elif (stream == "p"):
 		if (preview == "y"):
 			camera.start_preview()
 		while (counter <= length):
+			#nice-looking timestamp for overlay
 			timestamp = datetime.now().strftime("%m-%d-%Y_%H:%M:%S")
 			camera.annotate_text = timestamp
-			path = 'pics/' + timestamp + '.jpg'
+			#seconds since unix epoch for filename
+			filetime = int(time.time())
+			path = 'pics/' + filetime + '.jpg'
 			camera.capture(path, use_video_port=True)
 			time.sleep(interval)
 			counter += interval
