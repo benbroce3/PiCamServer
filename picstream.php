@@ -32,7 +32,7 @@
 			</div>
 			<!--Pictures-->
 			<?php
-				//
+				//Glob & display images in Bootstrap "col-md-4"s
 				function showPics($picRegEx)
 				{
 					//make reversed (chrono) array of images filenames matching $picRegEx
@@ -83,14 +83,16 @@
 					picsFold("Five");
 				?>
 			</div>
-			
-			<!--Grab DateTime-->
+
+
 			<?php
-				$mydate=getdate(date("U"));
-				echo "$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
+				//grab date & time
+				$today = getdate(date("U"));
+				$day = $today[mday];
+				$weekday = $today[weekday];
+				$month = $today[month];
+				
 			?>
-			
-			
 		</div>
 		<script>
 			window.setInterval(myTimer, 10000);
