@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	 //checking for cookie
-	 $keycheck = "enter";
+	//checking for cookie
+	$keycheck = "enter";
 	if($_SESSION["SecretKey"] != $keycheck) 
 	{
 		echo "<script type = 'text/javascript'>\n";
