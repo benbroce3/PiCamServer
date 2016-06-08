@@ -82,11 +82,11 @@
 					$epoch = date("U");
 					$today = getdate($epoch);
 					//MAIN
-					picsFold("One");
-					picsFold("Two");
-					picsFold("Three");
-					picsFold("Four");
-					picsFold("Five");
+					picsFold("One", "getdate($epoch)[]", );
+					picsFold("Two", "getdate($epoch - 86400)[]", );
+					picsFold("Three", "getdate($epoch - (86400*2))[]", );
+					picsFold("Four", "getdate($epoch - (86400*3))[]", );
+					picsFold("Five", "getdate($epoch - (86400*4))[]", );
 				?>
 			</div>
 		</div>
