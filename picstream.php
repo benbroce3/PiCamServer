@@ -82,6 +82,7 @@
 				//format a nice date for "x" days ago
 				function niceDate($daysAgo)
 				{
+					global $epoch;
 					$getday getdate($epoch - ($daysAgo * 86400));
 					return "getday[weekday], getday[month] getday[mday]";
 				}
@@ -89,24 +90,23 @@
 				//get the minimum filename epoch time for "x" days ago
 				function dayRegEx($daysAgo)
 				{
+					global $epoch;
 					$todayStart = ($epoch - ((getdate($epoch)[hours]*3600) + (getdate($epoch)[minutes]*60) + (getdate($epoch)[seconds])));
 					return ($todayStart - (daysAgo*86400));
 				}
+				
+				//PHP Bootstrap Accordion Parent
+				echo '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">'
+						//grab UNIX epoch time (secs)
+						$epoch = date("U");
+						//MAIN
+						picsFold("One", niceDate(0), dayRegEx(0));
+						picsFold("Two", niceDate(1), dayRegEx(1));
+						picsFold("Three", niceDate(2), dayRegEx(2));
+						picsFold("Four", niceDate(3), dayRegEx(3));
+						picsFold("Five", niceDate(4), dayRegEx(4));
+				echo '</div>'
 			?>
-			
-			<!--PHP Bootstrap Accordion Parent-->
-			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-				<?php
-					//grab UNIX epoch time (secs)
-					$epoch = date("U");
-					//MAIN
-					picsFold("One", niceDate(0), dayRegEx(0));
-					picsFold("Two", niceDate(1), dayRegEx(1));
-					picsFold("Three", niceDate(2), dayRegEx(2));
-					picsFold("Four", niceDate(3), dayRegEx(3));
-					picsFold("Five", niceDate(4), dayRegEx(4));
-				?>
-			</div>
 		</div>
 		<script>
 			window.setInterval(myTimer, 10000);
