@@ -38,26 +38,31 @@
 				function showPics($picRegEx)
 				{
 					//make reversed (chrono) array of images filenames matching $picRegEx
-					$images = array_reverse(glob("pics/".$picRegEx.".jpg"));
+					$images = array_reverse(glob("pics/*.jpg"));
+					
 					//recursively display matching images
 					foreach($images as $image) {
-						echo'
-							<div class="col-md-4">
-								<img src="'.$image.'" style="max-width:100%; max-height:100%;">
-								<br>
-							</div>
-						';
+						if ($picRegEx <= basename($image, ".jpg") && basename($image, ".jpg") < ($picRegEx + 86400))
+						{
+							echo'
+								<div class="col-md-4">
+									<img src="'.$image.'" style="max-width:100%; max-height:100%;">
+									<br>
+								</div>
+							';
+						}
 					}
 				}
 				
 				//PHP Bootstrap Accordion Child
-				function picsFold($foldNum, $foldName, $foldRegEx) {
+				function picsFold($foldNum, $foldName, $foldRegEx)
+				{
 					echo'
 						<div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="heading'.$foldNum.'">
 								<h4 class="panel-title">
 									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'.$foldNum.'" aria-expanded="true" aria-controls="collapse'.$foldNum.'">
-										LABEL
+										'.$foldName.'
 									</a>
 								</h4>
 							</div>
@@ -73,20 +78,33 @@
 						</div>
 					';
 				}
+				
+				//format a nice date for "x" days ago
+				function niceDate($daysAgo)
+				{
+					$getday getdate($epoch - ($daysAgo * 86400));
+					return "getday[weekday], getday[month] getday[mday]";
+				}
+				
+				//get the minimum filename epoch time for "x" days ago
+				function dayRegEx($daysAgo)
+				{
+					$todayStart = ($epoch - ((getdate($epoch)[hours]*3600) + (getdate($epoch)[minutes]*60) + (getdate($epoch)[seconds])));
+					return ($todayStart - (daysAgo*86400));
+				}
 			?>
 			
 			<!--PHP Bootstrap Accordion Parent-->
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 				<?php
-					//grab date & time
+					//grab UNIX epoch time (secs)
 					$epoch = date("U");
-					$today = getdate($epoch);
 					//MAIN
-					picsFold("One", "getdate($epoch)[]", );
-					picsFold("Two", "getdate($epoch - 86400)[]", );
-					picsFold("Three", "getdate($epoch - (86400*2))[]", );
-					picsFold("Four", "getdate($epoch - (86400*3))[]", );
-					picsFold("Five", "getdate($epoch - (86400*4))[]", );
+					picsFold("One", niceDate(0), dayRegEx(0));
+					picsFold("Two", niceDate(1), dayRegEx(1));
+					picsFold("Three", niceDate(2), dayRegEx(2));
+					picsFold("Four", niceDate(3), dayRegEx(3));
+					picsFold("Five", niceDate(4), dayRegEx(4));
 				?>
 			</div>
 		</div>
