@@ -14,10 +14,11 @@
 <html>
 	<head>
 		<title>Picture Stream</title>
-		<!--Bootstrap Setup-->
+		<!--Bootstrap/jQuery Setup-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-		<!--<script src="bootstrap/bootstrap.min.js"></script>-->
+		<script src="bootstrap/jquery-2.2.4.min.js"></script>
+		<script src="bootstrap/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid">
