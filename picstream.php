@@ -1,4 +1,16 @@
 <?php
+	session_start();
+	//checking for cookie
+	$keycheck = "enter";
+	if($_SESSION["SecretKey"] != $keycheck) 
+	{
+		echo "<script type = 'text/javascript'>\n";
+		echo "window.location = 'index.php';\n";
+		echo "</script>";
+	}
+?>
+
+<?php
 //DEBUGGER
 
 // ----------------------------------------------------------------------------------------------------
@@ -59,18 +71,6 @@ function ErrorHandler($type, $message, $file, $line)
 };
 
 $old_error_handler = set_error_handler("ErrorHandler");
-?>
-
-<?php
-	session_start();
-	//checking for cookie
-	$keycheck = "enter";
-	if($_SESSION["SecretKey"] != $keycheck) 
-	{
-		echo "<script type = 'text/javascript'>\n";
-		echo "window.location = 'index.php';\n";
-		echo "</script>";
-	}
 ?>
 
 <!DOCTYPE html>
