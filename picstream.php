@@ -33,10 +33,7 @@
 			</div>
 			<!--Pictures-->
 			<?php
-				//grab date & time
-				$epoch = date("U");
-				$today = getdate($epoch);
-				
+				//FUNCTIONS
 				//Glob & display images in Bootstrap "col-md-4"s
 				function showPics($picRegEx)
 				{
@@ -54,7 +51,7 @@
 				}
 				
 				//PHP Bootstrap Accordion Child
-				function picsFold($foldNum, $foldRegEx) {
+				function picsFold($foldNum, $foldName, $foldRegEx) {
 					echo'
 						<div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="heading'.$foldNum.'">
@@ -78,10 +75,13 @@
 				}
 			?>
 			
-			
 			<!--PHP Bootstrap Accordion Parent-->
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 				<?php
+					//grab date & time
+					$epoch = date("U");
+					$today = getdate($epoch);
+					//MAIN
 					picsFold("One");
 					picsFold("Two");
 					picsFold("Three");
