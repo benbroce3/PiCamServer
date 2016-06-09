@@ -12,7 +12,7 @@ print("Ctrl-C quits.\n")
 
 #configNow = input("Configure session settings now (y/n)? ").lower()
 stream = input("Should I stream video or take pictures (v/p)? ").lower()
-preview = input("Should I display video preview on Pi (y/n)? ").lower()
+preview = input("Should I display a local video preview (y/n)? ").lower()
 
 print("Running...")
 
