@@ -56,13 +56,13 @@
 				}
 				
 				//PHP Bootstrap Accordion Child
-				function picsFold($foldNum, $foldName, $foldRegEx)
+				function picsFold($foldNum, $foldName, $foldRegEx, $defaultOpen)
 				{
 					echo'
 						<div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="heading'.$foldNum.'">
 								<h4 class="panel-title">
-									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'.$foldNum.'" aria-expanded="true" aria-controls="collapse'.$foldNum.'">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'.$foldNum.'" aria-expanded="'.$defaultOpen.'" aria-controls="collapse'.$foldNum.'">
 										'.$foldName.'
 									</a>
 								</h4>
@@ -101,11 +101,11 @@
 						//grab UNIX epoch time (secs)
 						$epoch = date("U");
 						//MAIN
-						picsFold("One", niceDate(0), dayRegEx(0));
-						picsFold("Two", niceDate(1), dayRegEx(1));
-						picsFold("Three", niceDate(2), dayRegEx(2));
-						picsFold("Four", niceDate(3), dayRegEx(3));
-						picsFold("Five", niceDate(4), dayRegEx(4));
+						picsFold("One", niceDate(0), dayRegEx(0), "true");
+						picsFold("Two", niceDate(1), dayRegEx(1), "false");
+						picsFold("Three", niceDate(2), dayRegEx(2), "false");
+						picsFold("Four", niceDate(3), dayRegEx(3), "false");
+						picsFold("Five", niceDate(4), dayRegEx(4), "false");
 				echo '</div>';
 			?>
 		</div>
