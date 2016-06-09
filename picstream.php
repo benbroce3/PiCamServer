@@ -38,6 +38,7 @@
 				function showPics($picRegEx)
 				{
 					echo '<h3>'.$picRegEx.'</h3>'; //DEBUG
+					echo '<h3>'.($picRegEx + 86400).'</h3>';
 					//make reversed (chrono) array of images filenames matching $picRegEx
 					$images = array_reverse(glob("pics/*.jpg"));
 					
