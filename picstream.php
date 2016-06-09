@@ -116,14 +116,15 @@
 						picsFold("Four", niceDate(3), dayRegEx(3), "");
 						picsFold("Five", niceDate(4), dayRegEx(4), "");
 				echo '</div>';
+				echo '<script>var refreshID = 0;</script>'
 				while(1)
 				{
-					sleep(3);
+					sleep(5);
 					echo '
 						<script>
-							if ($("#collapseOne").is(":visible"))
+							if ($("#collapseOne").is(":visible") && refreshID == 0)
 							{
-								var refreshID = window.setInterval(timer, 10000);
+								refreshID = window.setInterval(timer, 10000);
 								function timer()
 								{
 									location.reload();
@@ -131,7 +132,8 @@
 							}
 							else
 							{
-								clearInterval(refreshIntervalId);
+								clearInterval(refreshID);
+								refreshID = 0;
 							}
 						</script>
 					';
