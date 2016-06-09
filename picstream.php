@@ -110,7 +110,7 @@
 						//grab UNIX epoch time (secs)
 						$epoch = date("U");
 						//MAIN
-						picsFold("One", niceDate(0), dayRegEx(0), " in");
+						picsFold("One", niceDate(0), dayRegEx(0), " in"); //display by default
 						picsFold("Two", niceDate(1), dayRegEx(1), "");
 						picsFold("Three", niceDate(2), dayRegEx(2), "");
 						picsFold("Four", niceDate(3), dayRegEx(3), "");
@@ -118,36 +118,19 @@
 				echo '</div>';
 			?>
 		</div>
-		
 		<script>
 			window.setInterval(timer, 10000);
 			function timer()
 			{
 				if ($("#collapseOne").is(":visible"))
-			}
-			
-			
-			if ($("#collapseOne").is(":visible") && refreshID == 0)
-			{
-				refreshID = window.setInterval(timer, 10000);
-				function timer()
 				{
 					location.reload();
 				}
-			}
-			else
-			{
-				clearInterval(refreshID);
-				refreshID = 0;
+				else
+				{
+					window.setInterval(timer, 10000);
+				}
 			}
 		</script>
-		
-		<!--<script>
-			window.setInterval(myTimer, 10000);
-			function myTimer()
-			{
-				location.reload();
-			}
-		</script>-->
 	</body>
 </html>
