@@ -83,7 +83,7 @@
 				function niceDate($daysAgo)
 				{
 					global $epoch;
-**troubleline					$getday = getdate($epoch - ($daysAgo * 86400));
+					$getday = getdate($epoch - ($daysAgo * 86400));
 					return "getday[weekday], getday[month] getday[mday]";
 				}
 				
