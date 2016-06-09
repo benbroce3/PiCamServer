@@ -109,12 +109,12 @@
 				echo '</div>';
 			?>
 		</div>
-		<script>
+		<!--<script>
 			window.setInterval(myTimer, 10000);
 			function myTimer()
 			{
 				location.reload();
 			}
-		</script>
+		</script>-->
 	</body>
 </html>
