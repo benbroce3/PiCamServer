@@ -48,8 +48,7 @@
 								<div class="col-md-4">
 									<img src="'.$image.'" style="max-width:100%; max-height:100%;">
 									<br>
-									<h1>-------------------------------------------------</h1>
-									<br>
+									<h3></h3>
 								</div>
 							';
 						}
