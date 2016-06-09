@@ -84,7 +84,7 @@
 				{
 					global $epoch;
 					$getday = getdate($epoch - ($daysAgo * 86400));
-					return "getday[weekday], getday[month] getday[mday]";
+					return "$getday[weekday], $getday[month] $getday[mday]";
 				}
 				
 				//get the minimum filename epoch time for "x" days ago
