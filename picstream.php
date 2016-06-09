@@ -116,16 +116,28 @@
 						picsFold("Four", niceDate(3), dayRegEx(3), "");
 						picsFold("Five", niceDate(4), dayRegEx(4), "");
 				echo '</div>';
+				while(1)
+				{
+					sleep(3);
+					echo '
+						<script>
+							if ($("#collapseOne").is(":visible"))
+							{
+								var refreshID = window.setInterval(timer, 10000);
+								function timer()
+								{
+									location.reload();
+								}
+							}
+							else
+							{
+								clearInterval(refreshIntervalId);
+							}
+						</script>
+					';
+				}
 			?>
 		</div>
-		<script>
-			var $top = $("#collapseOne");
-			$top.setInterval(reload, 10000);
-			function reload()
-			{
-				$top.load("index.php");
-			}
-		</script>
 		<!--<script>
 			window.setInterval(myTimer, 10000);
 			function myTimer()
