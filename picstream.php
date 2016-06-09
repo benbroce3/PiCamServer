@@ -92,7 +92,16 @@
 				function dayRegEx($daysAgo)
 				{
 					global $epoch;
-					$todayStart = ($epoch - ((getdate($epoch)[hours]*3600) + (getdate($epoch)[minutes]*60) + (getdate($epoch)[seconds])));
+					$todayEpoch = ((getdate($epoch)[hours]*3600) + (getdate($epoch)[minutes]*60) + (getdate($epoch)[seconds]));
+					if ($todayEpoch = 0)
+					{
+						echo '
+							<script>
+								location.reload();
+							</script>
+						';
+					}
+					$todayStart = ($epoch - $todayEpoch);
 					return ($todayStart - ($daysAgo*86400));
 				}
 				
@@ -109,6 +118,14 @@
 				echo '</div>';
 			?>
 		</div>
+		<script>
+			var $top = $("#collapseOne");
+			$top.setInterval(reload, 10000);
+			function reload()
+			{
+				$top.load("index.php");
+			}
+		</script>
 		<!--<script>
 			window.setInterval(myTimer, 10000);
 			function myTimer()
