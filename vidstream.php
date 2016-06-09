@@ -32,7 +32,6 @@
 			</div>
 			<!--Video-->
 			<center>
-				<br>
 				<embed type="application/x-vlc-plugin" text="Waiting for stream..." pluginspage="http://www.videolan.org" target="rtsp://192.168.0.236:8554/" height="480" width="640"/>
 			</center>
 		</div>
