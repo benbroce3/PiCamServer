@@ -118,14 +118,14 @@
 				echo '</div>';
 			?>
 		</div>
-		<script>
+		<!--<script>
 			var $top = $("#collapseOne");
 			$top.setInterval(reload, 10000);
 			function reload()
 			{
 				$top.load("index.php");
 			}
-		</script>
+		</script>-->
 		<!--<script>
 			window.setInterval(myTimer, 10000);
 			function myTimer()
