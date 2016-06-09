@@ -37,7 +37,7 @@
 				//Glob & display images in Bootstrap "col-md-4"s
 				function showPics($picRegEx)
 				{
-					echo "$picRegEx"; //DEBUG
+					echo '<h3>'.$picRegEx.'</h3>'; //DEBUG
 					//make reversed (chrono) array of images filenames matching $picRegEx
 					$images = array_reverse(glob("pics/*.jpg"));
 					
