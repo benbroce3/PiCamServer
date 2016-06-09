@@ -45,6 +45,7 @@
 					foreach($images as $image) {
 						if ($picRegEx <= basename($image, ".jpg") && basename($image, ".jpg") < ($picRegEx + 86400))
 						{
+							echo '<h3>'.basename($image, ".jpg").'</h3>'; //debug
 							echo'
 								<div class="col-md-4">
 									<img src="'.$image.'" style="max-width:100%; max-height:100%;">
