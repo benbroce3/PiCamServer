@@ -44,7 +44,7 @@
 					
 					//recursively display matching images
 					foreach($images as $image) {
-						if ($picRegEx <= basename($image, ".jpg") && basename($image, ".jpg") < ($picRegEx + 86400))
+						if (($picRegEx <= basename($image, ".jpg")) && (basename($image, ".jpg") < ($picRegEx + 86400)))
 						{
 							echo '<h3>'.basename($image, ".jpg").'</h3>'; //debug
 							echo'
@@ -95,7 +95,7 @@
 				{
 					global $epoch;
 					$todayStart = ($epoch - ((getdate($epoch)[hours]*3600) + (getdate($epoch)[minutes]*60) + (getdate($epoch)[seconds])));
-					return ($todayStart - (daysAgo*86400));
+					return ($todayStart - ($daysAgo*86400));
 				}
 				
 				//PHP Bootstrap Accordion Parent
