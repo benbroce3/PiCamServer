@@ -62,12 +62,12 @@
 						<div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="heading'.$foldNum.'">
 								<h4 class="panel-title">
-									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'.$foldNum.'" aria-expanded="'.$defaultOpen.'" aria-controls="collapse'.$foldNum.'">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'.$foldNum.'" aria-expanded="true" aria-controls="collapse'.$foldNum.'">
 										'.$foldName.'
 									</a>
 								</h4>
 							</div>
-							<div id="collapse'.$foldNum.'" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading'.$foldNum.'">
+							<div id="collapse'.$foldNum.'" class="panel-collapse collapse'.$defaultOpen.'" role="tabpanel" aria-labelledby="heading'.$foldNum.'">
 								<div class="panel-body">
 									<div class="row">
 					';
@@ -101,11 +101,11 @@
 						//grab UNIX epoch time (secs)
 						$epoch = date("U");
 						//MAIN
-						picsFold("One", niceDate(0), dayRegEx(0), "true");
-						picsFold("Two", niceDate(1), dayRegEx(1), "false");
-						picsFold("Three", niceDate(2), dayRegEx(2), "false");
-						picsFold("Four", niceDate(3), dayRegEx(3), "false");
-						picsFold("Five", niceDate(4), dayRegEx(4), "false");
+						picsFold("One", niceDate(0), dayRegEx(0), " in");
+						picsFold("Two", niceDate(1), dayRegEx(1), "");
+						picsFold("Three", niceDate(2), dayRegEx(2), "");
+						picsFold("Four", niceDate(3), dayRegEx(3), "");
+						picsFold("Five", niceDate(4), dayRegEx(4), "");
 				echo '</div>';
 			?>
 		</div>
