@@ -93,14 +93,14 @@
 				{
 					global $epoch;
 					$todayEpoch = ((getdate($epoch)[hours]*3600) + (getdate($epoch)[minutes]*60) + (getdate($epoch)[seconds]));
-					if ($todayEpoch = 0)
-					{
-						echo '
-							<script>
-								location.reload();
-							</script>
-						';
-					}
+					//if ($todayEpoch = 0)
+					//{
+					//	echo '
+					//		<script>
+					//			location.reload();
+					//		</script>
+					//	';
+					//}
 					$todayStart = ($epoch - $todayEpoch);
 					return ($todayStart - ($daysAgo*86400));
 				}
