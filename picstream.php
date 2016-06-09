@@ -97,7 +97,7 @@
 				}
 				
 				//PHP Bootstrap Accordion Parent
-				echo '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">';
+				echo '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"><br>';
 						//grab UNIX epoch time (secs)
 						$epoch = date("U");
 						//MAIN
