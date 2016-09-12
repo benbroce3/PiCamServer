@@ -25,7 +25,7 @@
 			$_SESSION["SecretKey"] = "enter";
 			
 			echo "<script type = 'text/javascript'>\n";
-			echo  "window.location= 'picstream.php';\n";
+			echo  "window.location= 'Test.html';\n";
 			echo "</script>";
 			exit();
 			
